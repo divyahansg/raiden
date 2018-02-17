@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 923F6CA9 \
 RUN apt-get update -y \
     && apt-get dist-upgrade -y
 
-RUN apt-get install python3 python3-pip
+RUN apt-get install -y python3 python3-pip
 
 RUN apt-get install -y automake build-essential git-core libffi-dev \
        libgmp-dev libssl-dev libtool pkg-config python-dev python-pip solc \
