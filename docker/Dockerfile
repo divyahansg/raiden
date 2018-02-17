@@ -17,7 +17,7 @@ RUN apt-get install -y automake build-essential git-core libffi-dev \
 
 RUN pip install --upgrade pip
 
-RUN git clone https://github.com/raiden-network/raiden.git /apps/raiden \
+RUN git clone -b python3 https://github.com/divyahansg/raiden.git /apps/raiden \
     && cd /apps/raiden \
     && pip3 install --upgrade -r requirements.txt \
     && python3 setup.py develop
