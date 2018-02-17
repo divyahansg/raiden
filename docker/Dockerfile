@@ -9,6 +9,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 923F6CA9 \
 RUN apt-get update -y \
     && apt-get dist-upgrade -y
 
+RUN apt-get install python3 python3-pip
+
 RUN apt-get install -y automake build-essential git-core libffi-dev \
        libgmp-dev libssl-dev libtool pkg-config python-dev python-pip solc \
     && rm -rf /var/lib/apt/lists/*
@@ -17,8 +19,8 @@ RUN pip install --upgrade pip
 
 RUN git clone https://github.com/raiden-network/raiden.git /apps/raiden \
     && cd /apps/raiden \
-    && pip install --upgrade -r requirements.txt \
-    && python setup.py develop
+    && pip3 install --upgrade -r requirements.txt \
+    && python3 setup.py develop
 
 WORKDIR /apps/raiden
 
