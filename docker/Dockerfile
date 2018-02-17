@@ -11,6 +11,8 @@ RUN apt-get update -y \
 
 RUN apt-get install -y python3 python3-pip
 
+RUN pip3 install --upgrade pip
+
 RUN apt-get install -y automake build-essential git-core libffi-dev \
        libgmp-dev libssl-dev libtool pkg-config python-dev python-pip solc \
     && rm -rf /var/lib/apt/lists/*
