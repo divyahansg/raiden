@@ -2,6 +2,8 @@ FROM ubuntu:xenial
 
 MAINTAINER Herman Junge <herman.junge@consensys.net>
 
+sudo add-apt-repository ppa:jonathonf/python-3.6
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 923F6CA9 \
     && echo "deb http://ppa.launchpad.net/ethereum/ethereum/ubuntu xenial main" \
        | tee -a /etc/apt/sources.list.d/ethereum.list
