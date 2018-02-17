@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 923F6CA9 \
 RUN apt-get update -y \
     && apt-get dist-upgrade -y
 
-RUN apt-get install -y python3 python3-pip
+RUN apt-get install -y python3.6 python3-pip
 
 RUN pip3 install --upgrade pip
 
@@ -22,7 +22,7 @@ RUN pip install --upgrade pip
 RUN git clone -b python3 https://github.com/divyahansg/raiden.git /apps/raiden \
     && cd /apps/raiden \
     && pip3 install --upgrade -r requirements.txt \
-    && python3 setup.py develop
+    && python3.6 setup.py develop
 
 WORKDIR /apps/raiden
 
