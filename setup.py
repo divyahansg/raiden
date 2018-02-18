@@ -102,7 +102,7 @@ class CompileWebUI(Command):
 
 
 with open('README.rst') as readme_file:
-    readme = readme_file.read()
+    readme = '' # readme_file.read()
 
 
 history = ''
